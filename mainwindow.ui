@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>410</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Aura Bank</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">alternate-background-color: rgb(170, 255, 127);
+ 
+background-color: rgb(0, 145, 106);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">alternate-background-color: rgb(84, 124, 255);
+ </string>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <widget class="QWidget" name="welcomePage">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 255);</string>
+       </property>
+       <layout class="QVBoxLayout" name="welcomeLayout">
+        <item>
+         <widget class="QLabel" name="welcomeLabel">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(67, 80, 255);
+background-color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Welcome to Aura Bank</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="welcome_createAccountButton">
+          <property name="text">
+           <string>Create Account</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="welcome_loginButton">
+          <property name="text">
+           <string>Login</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="welcomeSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="createAccountPage">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 255, 255);</string>
+       </property>
+       <layout class="QVBoxLayout" name="createAccountLayout">
+        <item>
+         <widget class="QLabel" name="createAccountLabel">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> color: rgb(67, 80, 255);
+ </string>
+          </property>
+          <property name="text">
+           <string>Create Account</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="createAccount_createNameEdit">
+          <property name="placeholderText">
+           <string>Enter your name</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="createAccount_createmailEdit">
+          <property name="placeholderText">
+           <string>enter mail</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="createAccount_emailStatusLabel">
+          <property name="text">
+           <string>mailstatus:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="createAccount_createPassEdit">
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Enter password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="createAccount_passwordStatusLabel">
+          <property name="text">
+           <string>status:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="createAccount_createConfirmPassEdit">
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Confirm password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="createAccount_createAgeEdit">
+          <property name="minimum">
+           <number>18</number>
+          </property>
+          <property name="maximum">
+           <number>120</number>
+          </property>
+          <property name="value">
+           <number>18</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="sexLayout">
+          <item>
+           <widget class="QCheckBox" name="createAccount_createSexEdit1">
+            <property name="text">
+             <string>Male</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="createAccount_createSexEdit2">
+            <property name="text">
+             <string>Female</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="createAccount_sexStatusLabel">
+          <property name="text">
+           <string>sexstatus:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="createAccount_createAccountTypeCombo">
+          <property name="currentText">
+           <string>savings</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>savings</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>checking</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="createAccount_createMonthsEdit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <number>4</number>
+          </property>
+          <property name="maximum">
+           <number>120</number>
+          </property>
+          <property name="value">
+           <number>4</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="createAccount_createOverdraftEdit">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimum">
+           <number>1000</number>
+          </property>
+          <property name="maximum">
+           <number>1000000</number>
+          </property>
+          <property name="value">
+           <number>1000</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="createAccount_accountNumberLabel">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Account Number: N/A</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="createAccount_statusLabel">
+          <property name="text">
+           <string>Status: Ready</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="createAccount_createButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(39, 167, 61);
+background-color: rgb(53, 107, 255);</string>
+          </property>
+          <property name="text">
+           <string>Create</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="createAccount_returnButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 127);</string>
+          </property>
+          <property name="text">
+           <string> return</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="createAccountSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="loginPage">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 255);</string>
+       </property>
+       <layout class="QVBoxLayout" name="loginLayout">
+        <item>
+         <widget class="QLabel" name="loginLabel">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+background-color: rgb(0, 0, 0);
+color: rgb(88, 110, 255);</string>
+          </property>
+          <property name="text">
+           <string>Login</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="login_accountNumberEdit">
+          <property name="placeholderText">
+           <string>Enter account number</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="login_passwordEdit">
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Enter password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="login_loginButton">
+          <property name="text">
+           <string>Login</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="login_returnButton">
+          <property name="text">
+           <string>return</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="loginSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mainMenuPage">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 255);</string>
+       </property>
+       <layout class="QVBoxLayout" name="mainMenuLayout">
+        <item>
+         <widget class="QLabel" name="mainMenuLabel">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(48, 79, 255);
+background-color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Main Menu</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenu_depositButton">
+          <property name="text">
+           <string>Deposit</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenu_withdrawButton">
+          <property name="text">
+           <string>Withdraw</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenu_accountInfoButton">
+          <property name="text">
+           <string>Account Info</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenu_deleteButton">
+          <property name="text">
+           <string>Delete Account</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenu_updateButton">
+          <property name="text">
+           <string>Update Account</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="mainMenu_exitButton">
+          <property name="text">
+           <string>Exit</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="mainMenuSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="depositpage">
+       <property name="styleSheet">
+        <string notr="true"> 
+background-color: rgb(0, 255, 255);
+ </string>
+       </property>
+       <widget class="QLabel" name="depositlabel">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>-10</y>
+          <width>511</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(103, 113, 255);
+background-color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt; DEPOSIT PAGE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="depositAmountSpin">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>501</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1000</number>
+        </property>
+        <property name="maximum">
+         <number>10000000</number>
+        </property>
+        <property name="value">
+         <number>1000</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="depositButton">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>200</y>
+          <width>321</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>deposit</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="returntoMainMenuButton">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>270</y>
+          <width>141</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>return menu</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="withdrawpage">
+       <property name="styleSheet">
+        <string notr="true"> 
+ 
+ 
+background-color: rgb(0, 255, 255);</string>
+       </property>
+       <widget class="QLabel" name="withdrawlabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>531</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(67, 80, 255);
+background-color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>                                                      WITHDRAW PAGE</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="withdrawAmountSpin">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>481</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>200</number>
+        </property>
+        <property name="maximum">
+         <number>1000000</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="withdrawButton">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>139</y>
+          <width>241</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> 
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string> withdraw</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="returntoMainMenuButton_2">
+        <property name="geometry">
+         <rect>
+          <x>415</x>
+          <y>230</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> 
+color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>return home</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="infoTab">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 255);</string>
+       </property>
+       <widget class="QLabel" name="accountInfolabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(67, 80, 255);
+background-color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt; ACCOUNT INFO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>30</y>
+          <width>531</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="infoLayout">
+         <item>
+          <widget class="QTextEdit" name="infoDisplay">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="placeholderText">
+            <string>ACCOUNT INFO WILL BE DISPLAYED HERE:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="applyInterestButton">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>250</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> 
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Apply interest</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="refreshInfoButton">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>250</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>refreshInfo</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="returntoMainMenuButton_3">
+        <property name="geometry">
+         <rect>
+          <x>405</x>
+          <y>280</y>
+          <width>131</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>return home</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="deleteaccountpage">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 255);</string>
+       </property>
+       <widget class="QLabel" name="deletelabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>521</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(67, 80, 255);
+background-color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;DELETE ACCOUNT PAGE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="deleteAccount_deletenumberEdit">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>59</y>
+          <width>511</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> 
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Normal</enum>
+        </property>
+        <property name="placeholderText">
+         <string>accountnumber:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="deleteAccountButton">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>140</y>
+          <width>251</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string> deleteaccount</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="returntoMainMenuButton_4">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>190</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>return home</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="updateaccountpage">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 255, 255);</string>
+       </property>
+       <widget class="QLabel" name="updateLable">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>531</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(67, 80, 255);
+background-color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt; UPDATE ACCOUNT PAGE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="NewNameEdit">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>481</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursorPosition">
+         <number>0</number>
+        </property>
+        <property name="placeholderText">
+         <string>newname:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="NewPasswordEdit">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>481</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>newpassword:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="NewemailEdit">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>140</y>
+          <width>481</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="cursorPosition">
+         <number>0</number>
+        </property>
+        <property name="placeholderText">
+         <string>mail:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="updateButton">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>190</y>
+          <width>201</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>update</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="returntoMainMenuButton_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>return home</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>550</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
